@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <title>Umbrella Corp</title>
+
+    <!-- Importar fuente Orbitron -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="formulario.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        body {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: url('https://media.giphy.com/media/3o7TKz2eMXx7dn95FS/giphy.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            padding-top: 60px;
+        }
+
+        .menu {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 10px 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 8px 12px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .menu a:hover {
+            background: rgba(255, 255, 255, 0.5);
+            color: red;
+        }
+
+        section {
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            margin: 20px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .main-title {
+            font-size: 300%;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .sub-title {
+            font-size: 150%;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        img {
+            width: 500px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+
+        table {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: rgba(255, 255, 255, 0.2);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        td {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Barra de menú -->
+    <nav class="menu">
+        <a href="umbrella2.html">Inicio</a>
+        <a href="umbrella2-CONTACTOS.html">Asociate</a>
+        <a href="umbrella2-BENEFICIOS.html">Beneficios</a>
+    </nav>
+
+    <section>
+        <h1 class="main-title">UMBRELLA CORP</h1>
+        <h2 class="sub-title">Nuestra historia</h2>
+        <p>
+            Umbrella surgió a partir de fines de la década de los años 60, se dedicó en un inicio a la producción de medicamentos, 
+            pero más adelante comenzó a desarrollar sus actividades, principalmente computación y sistemas de salud e ingeniería 
+            genética con el descubrimiento del virus Progenitor que más tarde daría origen al virus-T, un medicamento revolucionario 
+            descubierto por parte de un miembro de la familia Ashford. Más tarde, se conformó en los años 60 como una multinacional 
+            independiente del gobierno de Estados Unidos.
+        </p>
+        <img src="C:\Users\nicol\OneDrive\Fotos\T.P PAG UMBRELLA HOSPITAL\10.jpg" alt="Historia de Umbrella">
+    </section>
+
+    <section>
+        <h2 class="sub-title">Significado del logo</h2>
+        <p>
+            Oswell E. Spencer creó el logotipo de la compañía inspirándose en el símbolo del culto de la Madre Miranda a quien conoció 
+            en su juventud y quién le enseñó sus conocimientos en genética.
+            La corporación era, para el público, una de las principales proveedoras de tecnología de computadoras, productos médicos y sistemas de salud.
+        </p>
+        <p>
+            En el presente, ya con más de 65 años, la compañía es una de las empresas farmacéuticas más exitosas a nivel mundial y con mejor venta 
+            en medicamentos que salvaron la vida de millones de personas, y ha sido de múltiples beneficios para una vida más prolongada, con la diferencia 
+            que es accesible a todo el público.
+        </p>
+        <img src="C:\Users\nicol\OneDrive\Fotos\T.P PAG UMBRELLA HOSPITAL\6 (3).jpg" alt="Logotipo de Umbrella">
+    </section>
+
+    <section>
+        <h2 class="sub-title">¿Dónde encontrarnos?</h2>
+        <img src="C:\Users\nicol\OneDrive\Fotos\T.P PAG UMBRELLA HOSPITAL\4.jpg" alt="Ubicación de Umbrella">
+        <p>NUESTRA CENTRAL MÁS IMPORTANTE SE ENCUENTRA EN 550 1st Ave., New York, NY 10016, Estados Unidos.</p> 
+        <img src="C:\Users\nicol\OneDrive\Fotos\T.P PAG UMBRELLA HOSPITAL\15.png" alt="Imagen final de Umbrella">
+    </section>
+
+    <img src="C:\Users\nicol\OneDrive\Fotos\T.P PAG UMBRELLA HOSPITAL\6.jpg" alt="Imagen adicional" style="width: 100%; height: auto;">
+
+
+</body>
+</html>

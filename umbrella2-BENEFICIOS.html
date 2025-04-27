@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umbrella Corp</title>
+
+    <!-- Importar fuente Orbitron -->
+    <link rel="stylesheet" href="umbrella2.html" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="formulario.js"></script>
+
+    <style>
+        /* Estilos generales */
+        body {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            background: url('https://media.giphy.com/media/3o7TKz2eMXx7dn95FS/giphy.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            padding: 20px;
+        }
+
+        /* Fondo semitransparente para mejorar legibilidad */
+        section {
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            margin: 20px 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Más oscuro para mayor contraste */
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Título de la sección "Nuestros Beneficios" */
+        h2 {
+            font-weight: bold; /* En negrita */
+            font-size: 3rem; /* Aumentar tamaño de fuente en un 100% */
+            margin-bottom: 20px;
+        }
+
+        /* Tabla sin bordes */
+        table {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro para mayor contraste */
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: rgba(255, 255, 255, 0.2);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        td {
+            font-size: 1rem;
+        }
+
+        /* Imágenes centradas */
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Estilos del menú */
+        .menu {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            background: rgba(255, 255, 255, 0.3); /* Fondo transparente */
+            backdrop-filter: blur(10px); /* Efecto de desenfoque */
+            border: 1px solid rgba(255, 255, 255, 0.5); /* Bordes sutiles */
+            border-radius: 10px;
+            padding: 8px 15px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 8px 12px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .menu a:hover {
+            background: rgba(255, 255, 255, 0.5);
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Barra de menú -->
+    <nav class="menu">
+        <a href="#umbrella2.html">Inicio</a>
+        <a href="#umbrella2-CONTACTOS.html">Asociante</a>
+        <a href="#umbrella2-BENEFICIOS.html">Beneficios</a>
+    </nav>
+
+    <section>
+        <h2>Nuestros Beneficios</h2>
+        <img src="https://static.wikia.nocookie.net/residentevil/images/3/30/Resh_reuc_poster12.jpg/revision/latest?cb=20120714203029&path-prefix=es" 
+             alt="Póster de Umbrella Corp">
+    <p>PROMOS con la subcripción a Umbrella, PUEDES HACERTE CON MÚLTIPLES BENEFICIOS</p> 
+    </section>
+
+    <table>
+        <tr>
+            <th>Medicamentos</th>
+            <th>Precio Original</th>
+            <th>Descuento</th>
+            <th>Precio Final</th>
+        </tr>
+        <tr>
+            <td>Safsprin</td>
+            <td>$100</td>
+            <td>15%</td>
+            <td>$85</td>
+        </tr>
+        <tr>
+            <td>Aqua Cure</td>
+            <td>$150</td>
+            <td>20%</td>
+            <td>$120</td>
+        </tr>
+        <tr>
+            <td>Adravil</td>
+            <td>$200</td>
+            <td>30%</td>
+            <td>$140</td>
+        </tr>
+    </table>
+
+    
+    <section>
+        <h2>Safsprin</h2>
+        <img src="https://static.wikia.nocookie.net/residentevil/images/0/01/Safsprin.jpg/revision/latest?cb=20121006223244&path-prefix=es" 
+             alt="Safsprin - Umbrella Corp">
+        <p>Es uno de los primeros productos de salud pública creado por la Corporación Umbrella. Es una especie de aspirina, indicada para enfermedades comunes, tales como las causadas por el virus del resfriado, dolores de cabeza, etc.</p>
+    </section>
+
+    <section>
+        <h2>Aqua Cure</h2>
+        <img src="https://static.wikia.nocookie.net/residentevil/images/7/76/Aqua_Cure.jpg/revision/latest?cb=20121006222409&path-prefix=es" 
+             alt="Aqua Cure - Umbrella Corp">
+        <p>Es un producto fabricado y vendido por la Corporación Umbrella como uno de sus productos más populares. Aqua Cure es usado sobre heridas abiertas y se supone que este producto contiene una pequeña cantidad de virus-T como base para reconstruir las células dañadas.</p>
+    </section>
+
+    <section>
+        <h2>Adravil</h2>
+        <img src="https://static.wikia.nocookie.net/residentevil/images/2/25/Adravil.jpg/revision/latest?cb=20121006223829&path-prefix=es"  
+             alt="Adravil - Umbrella Corp">
+        <p>Adravil es una medicina producida y vendida por la Corporación Umbrella. Es un producto que permite a su consumidor aliviar dolores, muy similar al Ibuprofeno o al Paracetamol.</p>
+    </section>
+
+    
+    <img src="C:\Users\nicol\OneDrive\Fotos\T.P PAG UMBRELLA HOSPITAL\6.jpg" alt="Imagen adicional" style="width: 100%; height: auto;">
+
+  
+</body>
+</html>

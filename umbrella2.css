@@ -1,0 +1,106 @@
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmlreWpmZDF2OTNmbDd4YXdtb2piMWpjOGltYXU3Z2Z6dm42d3kwcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7TKz2eMXx7dn95FS/giphy.gif');
+    background-size: cover;
+    color: rgb(147, 36, 147);
+    padding: 20px;
+}
+
+/* Fondo semitransparente para mejorar legibilidad */
+section {
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Tabla de precios */
+table {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+td {
+    font-size: 1rem;
+}
+
+/* Imágenes centradas */
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+<style>
+    .dropdown-table {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        cursor: pointer;
+        position: relative;
+        width: 250px;
+        margin-bottom: 20px;
+        background-color: #fff;
+    }
+
+    .dropdown-label {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgb(12, 4, 4);
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        z-index: 10;
+        margin-top: 5px;
+    }
+
+    .dropdown-content table {
+        width: 100%;
+        border-collapse: collapse;
+        color: gray;
+    }
+
+    .dropdown-content td {
+        padding: 10
+    }
+
+    

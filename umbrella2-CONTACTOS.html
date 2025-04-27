@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Imagen</title>
+
+    <!-- Fuente Orbitron desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="umbrella2.css" /> <!-- Asegurate que sea CSS real -->
+
+    <script src="formulario.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: url('https://media.giphy.com/media/3o7TKz2eMXx7dn95FS/giphy.gif') no-repeat center center fixed;
+            background-size: cover;
+            padding-top: 60px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 900px;
+            margin: 50px auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .form-container {
+            width: 50%;
+            padding-right: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Orbitron', sans-serif;
+            color: #fff;
+        }
+
+        label {
+            font-weight: bold;
+            min-width: 160px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="date"] {
+            background-color: #111;
+            color: #0ff;
+            border: 1px solid #0ff;
+            border-radius: 8px;
+            padding: 5px 10px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: red;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: darkred;
+        }
+
+        .image-container {
+            width: 50%;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .menu {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            padding: 8px 15px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 8px 12px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .menu a:hover {
+            background: rgba(255, 255, 255, 0.5);
+            color: red;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 32px;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .dropdown-table {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            cursor: pointer;
+            position: relative;
+            width: 250px;
+            margin-bottom: 20px;
+        }
+
+        .dropdown-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            z-index: 10;
+            margin-top: 5px;
+        }
+
+        .dropdown-content table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .dropdown-content td {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+
+        .dropdown-content td:hover {
+            background-color: #f2f2f2;
+        }
+
+        .selected-option {
+            color: #333;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .form-container, .image-container {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Menú -->
+    <nav class="menu">
+        <a href="umbrella2.html">Inicio</a>
+        <a href="umbrella2-CONTACTOS.html">Asociate</a>
+        <a href="umbrella2-BENEFICIOS.html">Beneficios</a>
+    </nav>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>Completá el formulario y un representante te contactará</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre y Apellido:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Completar nombre del usuario">
+                </div>
+
+                <div class="form-group">
+                    <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="direccion">¿Dónde vivís?</label>
+                    <input type="text" id="direccion" name="direccion" required placeholder="Completar dirección actual">
+                </div>
+
+                <div class="form-group">
+                    <label class="dropdown-label">¿Incluís pareja a tu plan?</label>
+                    <div class="dropdown-table" onclick="toggleDropdown('dropdownPareja')">
+                        <span id="selectedPareja">Seleccionar</span>
+                        <div class="dropdown-content" id="dropdownPareja">
+                            <table style="color: gray;">
+                                <tr onclick="selectOption('pareja', 'Sí', 'selectedPareja')"><td>Sí</td></tr>
+                                <tr onclick="selectOption('pareja', 'No', 'selectedPareja')"><td>No</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                    <input type="hidden" name="pareja" id="inputPareja" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="dropdown-label">¿Incluís hijos a tu plan?</label>
+                    <div class="dropdown-table" onclick="toggleDropdown('dropdownHijos')">
+                        <span id="selectedHijos">Seleccionar</span>
+                        <div class="dropdown-content" id="dropdownHijos">
+                            <table style="color: gray;">
+                                <tr onclick="selectOption('hijos', 'Sí', 'selectedHijos')"><td>Sí</td></tr>
+                                <tr onclick="selectOption('hijos', 'No', 'selectedHijos')"><td>No</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                    <input type="hidden" name="hijos" id="inputHijos" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cantidadHijos">¿Cuántos hijos se van a suscribir?:</label>
+                    <input type="range" id="cantidadHijos" name="cantidadHijos" min="0" max="10" required oninput="outputEdad.value = cantidadHijos.value">
+                    <output id="outputEdad">0</output>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="correo_de_usuario@hotmail.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="celular">Número de celular:</label>
+                    <input type="tel" id="celular" name="celular" required placeholder="+54 15 0000 0000">
+                </div>
+
+                <div class="form-group">
+                    <label for="consulta">Cuéntanos tu consulta:</label>
+                    <textarea id="consulta" name="consulta" rows="3"></textarea>
+                </div>
+
+                <button type="button" onclick="mostrarPrevisualizacion()">ENVIAR FORMULARIO</button>
+            </form>
+        </div>
+
+        <div class="image-container">
+            <img src="C:\Users\nicol\OneDrive\Fotos\T.P PAG UMBRELLA HOSPITAL\13.jpg" alt="Formulario Imagen">
+        </div>
+    </div>
+
+    <div id="previsualizacion" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(30,30,30,0.9); color:white; z-index:9999; padding:30px; overflow:auto;">
+        <div style="max-width:600px; margin:auto; background:rgba(50,50,50,0.8); padding:20px; border-radius:10px;">
+            <h2 style="text-align:center;">Previsualización de tus datos</h2>
+            <div id="detalleDatos" style="margin-top:20px; line-height:1.8;"></div>
+            <div style="text-align:center; margin-top:20px;">
+                <button onclick="enviarFormulario()" style="background:green; padding:10px 20px; color:white; font-weight:bold; border:none; border-radius:5px; cursor:pointer;">CONFIRMAR ENVÍO</button>
+                <button onclick="cerrarPrevisualizacion()" style="background:darkred; padding:10px 20px; color:white; font-weight:bold; border:none; border-radius:5px; cursor:pointer; margin-left:10px;">CANCELAR</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mensajeExito" style="display:none; position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:rgba(0, 128, 0, 0.9); color:white; padding:15px 30px; border-radius:8px; font-weight:bold; z-index:9999;">
+        Datos enviados correctamente ✅
+    </div>
+
+    <script>
+        function toggleDropdown(id) {
+            document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+                if (dropdown.id !== id) {
+                    dropdown.style.display = 'none';
+                }
+            });
+            const element = document.getElementById(id);
+            element.style.display = (element.style.display === 'block') ? 'none' : 'block';
+        }
+
+        function selectOption(name, value, labelId) {
+            document.getElementById(`input${capitalize(name)}`).value = value;
+            document.getElementById(labelId).textContent = value;
+            document.getElementById(`dropdown${capitalize(name)}`).style.display = 'none';
+        }
+
+        function capitalize(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.dropdown-table')) {
+                document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+                    dropdown.style.display = 'none';
+                });
+            }
+        });
+
+        function mostrarPrevisualizacion() {
+            const nombre = document.getElementById('nombre').value;
+            const fechaNacimiento = document.getElementById('fechaNacimiento').value;
+            const direccion = document.getElementById('direccion').value;
+            const pareja = document.getElementById('inputPareja').value;
+            const hijos = document.getElementById('inputHijos').value;
+            const cantidadHijos = document.getElementById('cantidadHijos').value;
+            const email = document.getElementById('email').value;
+            const celular = document.getElementById('celular').value;
+            const consulta = document.getElementById('consulta').value;
+
+            if (!nombre || !fechaNacimiento || !direccion || !pareja || !hijos || !email || !celular) {
+                alert("Por favor completá todos los campos obligatorios.");
+                return;
+            }
+
+            const html = `
+                <p><strong>Nombre:</strong> ${nombre}</p>
+                <p><strong>Fecha de nacimiento:</strong> ${fechaNacimiento}</p>
+                <p><strong>Dirección:</strong> ${direccion}</p>
+                <p><strong>Incluye pareja:</strong> ${pareja}</p>
+                <p><strong>Incluye hijos:</strong> ${hijos}</p>
+                <p><strong>Cantidad de hijos:</strong> ${cantidadHijos}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Celular:</strong> ${celular}</p>
+                <p><strong>Consulta:</strong> ${consulta || 'Ninguna'}</p>
+            `;
+            document.getElementById('detalleDatos').innerHTML = html;
+            document.getElementById('previsualizacion').style.display = 'block';
+        }
+
+        function cerrarPrevisualizacion() {
+            document.getElementById('previsualizacion').style.display = 'none';
+        }
+
+        function enviarFormulario() {
+            document.getElementById('previsualizacion').style.display = 'none';
+            document.querySelector('form').reset();
+            document.getElementById('mensajeExito').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('mensajeExito').style.display = 'none';
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
